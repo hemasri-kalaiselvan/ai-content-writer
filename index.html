@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AI Copywriting Assistant</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+    textarea, button { width: 100%; padding: 12px; margin: 8px 0; font-size: 16px; }
+    button { background: #4f46e5; color: white; border: none; border-radius: 8px; cursor: pointer; }
+    #output { white-space: pre-wrap; background: #f4f4f5; padding: 16px; border-radius: 8px; min-height: 60px; }
+  </style>
+</head>
+<body>
+  <h1>AI Copywriting Assistant</h1>
+  <p>Enter a topic, get a LinkedIn post.</p>
+  <textarea id="topic" rows="3" placeholder="e.g. why small businesses should use AI"></textarea>
+  <button onclick="generate()">Write it</button>
+  <h3>Result:</h3>
+  <div id="output">Your post will appear here.</div>
+
+  <script>
+    async function generate() {
+      const topic = document.getElementById("topic").value;
+      const out = document.getElementById("output");
+      out.textContent = "Writing...";
+      try {
+        const res = await fetch("/api/write", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ topic })
+        });
+        const data = await res.json();
+        out.textContent = data.result || data.error;
+      } catch (e) {
+        out.textContent = "Something went wrong.";
+      }
+    }
+  </script>
+</body>
+</html>
