@@ -4,7 +4,7 @@ A live web tool that generates marketing copy in one click — LinkedIn posts, r
 
 At its core it's an **AI content writer** — essentially a "wrapper" around an existing model like Gemini. You send a prompt to an API, get text back, and display it. No training data, no machine learning math, no infrastructure to run yourself.
 
-**[Live demo](https://ai-content-writer-hem.vercel.app/)**
+**[Live demo](https://ai-content-writer-hemasri.vercel.app/)**
 
 ---
 
@@ -90,8 +90,8 @@ Then click **Deploy** and wait about a minute.
 ### Step 6: Get a live URL
 Vercel gives you something like `ai-content-writer-yourname.vercel.app`. Open it — the tool works, live, for anyone, and the key stays hidden.
 
-- Live site: https://ai-content-writer-hem.vercel.app/
-- Backend endpoint: https://ai-content-writer-hem.vercel.app/api/write
+- Live site: https://ai-content-writer-hemasri.vercel.app/
+- Backend endpoint: https://ai-content-writer-hemasri.vercel.app/api/write
 
 ### Step 7: Link it from the portfolio
 In the portfolio's project section, add the project with a link to the Vercel URL — real, working, and clickable.
