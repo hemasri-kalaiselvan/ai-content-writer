@@ -2,15 +2,15 @@
 
 A live web tool that generates marketing copy in one click — LinkedIn posts, rewritten emails, blog-to-social captions, product descriptions, cold outreach, and ad copy. Pick a mode, set the tone, choose how many variations you want, and copy or download the result. Output streams in word by word as it's written. No prompt-writing required.
 
-At its core it's an **AI copywriting assistant** — essentially a "wrapper" around an existing model like Gemini. You send a prompt to an API, get text back, and display it. No training data, no machine learning math, no infrastructure to run yourself.
+At its core it's an **AI content writer** — essentially a "wrapper" around an existing model like Gemini. You send a prompt to an API, get text back, and display it. No training data, no machine learning math, no infrastructure to run yourself.
 
-**[Live demo](https://ai-copywriter-gamma-five.vercel.app/)**
+**[Live demo](https://ai-content-writer-hem.vercel.app/)**
 
 ---
 
 ## Why build this when ChatGPT, Gemini exist?
 
-Anyone can use ChatGPT. Far fewer people can wire up a front end, a hidden backend, an API call, secret key management, and a live deployment. That's the skill being shown here. The copywriter is just the visible shell around infrastructure that's identical to what real AI products run on.
+Anyone can use ChatGPT. Far fewer people can wire up a front end, a hidden backend, an API call, secret key management, and a live deployment. That's the skill being shown here. The content writer is just the visible shell around infrastructure that's identical to what real AI products run on.
 
 A blank chatbot also makes the user do all the work. This tool bakes the expertise in: pick a mode, type a few words, get expert output in one click. The value isn't the AI — it's that the expertise is built in, so anyone gets expert results without knowing how to ask.
 
@@ -58,7 +58,7 @@ The API key lives only in Vercel's environment variables, so it stays hidden fro
 ## How I built it
 
 ### Step 1: Create a new GitHub repo
-On github.com, click **New repository**, name it `ai-copywriter`, make it public, and check "Add a README." For the description: *Full-stack AI copywriting tool that generates LinkedIn posts from a topic — HTML front end, serverless backend, and Gemini API. Deployed on Vercel.*
+On github.com, click **New repository**, name it `ai-content-writer`, make it public, and check "Add a README." For the description: *Full-stack AI content writing tool that generates LinkedIn posts, emails, and marketing copy from a short prompt — HTML front end, serverless backend, and Gemini API. Deployed on Vercel.*
 
 ### Step 2: Add the two files
 Use GitHub's **Add file → Create new file** button right in the browser — no local install needed.
@@ -76,7 +76,7 @@ The key is never in `index.html` — it lives only in `process.env.GEMINI_KEY`, 
 5. **Paste it into Vercel** — as an environment variable named `GEMINI_KEY` (covered in Step 5).
 
 ### Step 4: Connect the repo to Vercel
-Go to vercel.com, sign up with your GitHub account (free). Click **Add New → Project**, pick the `ai-copywriter` repo, and click **Import**.
+Go to vercel.com, sign up with your GitHub account (free). Click **Add New → Project**, pick the `ai-content-writer` repo, and click **Import**.
 
 ### Step 5: Add the secret key in Vercel
 Before deploying, open the **Environment Variables** section and add:
@@ -88,10 +88,10 @@ Then click **Deploy** and wait about a minute.
 > Note: environment variables only apply on a fresh deployment. If you add the key after deploying, trigger a redeploy from the Deployments tab.
 
 ### Step 6: Get a live URL
-Vercel gives you something like `ai-copywriter-yourname.vercel.app`. Open it — the tool works, live, for anyone, and the key stays hidden.
+Vercel gives you something like `ai-content-writer-yourname.vercel.app`. Open it — the tool works, live, for anyone, and the key stays hidden.
 
-- Live site: https://ai-copywriter-gamma-five.vercel.app/
-- Backend endpoint: https://ai-copywriter-gamma-five.vercel.app/api/write
+- Live site: https://ai-content-writer-hem.vercel.app/
+- Backend endpoint: https://ai-content-writer-hem.vercel.app/api/write
 
 ### Step 7: Link it from the portfolio
 In the portfolio's project section, add the project with a link to the Vercel URL — real, working, and clickable.
