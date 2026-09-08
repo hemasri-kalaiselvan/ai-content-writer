@@ -1,5 +1,12 @@
 # AI Content Writer
 
+> A live web tool that generates marketing copy in one click — pick a mode, set the tone, choose how many variations, and copy or download the result.
+
+**Tech:** HTML, CSS, JavaScript, Node.js
+**Tools:** GitHub, Vercel
+**AI Tools:** ChatGPT, Claude, Gemini
+**Live:** https://ai-content-writer-hemasri.vercel.app/
+
 A live web tool that generates marketing copy in one click — LinkedIn posts, rewritten emails, blog-to-social captions, product descriptions, cold outreach, and ad copy. Pick a mode, set the tone, choose how many variations you want, and copy or download the result. Output streams in word by word as it's written. No prompt-writing required.
 
 At its core it's an **AI content writer** — essentially a "wrapper" around an existing model like Gemini. You send a prompt to an API, get text back, and display it. No training data, no machine learning math, no infrastructure to run yourself.
